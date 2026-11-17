@@ -1,0 +1,90 @@
+
+*{
+   padding: 0;
+   margin: 0;
+   
+}
+.heading{
+    background-color:rgb(186, 164, 133);
+    color:rgb(80, 32, 32);
+    
+    
+    padding: 18px;
+    padding-left: 43%;
+    margin-bottom:0px;
+}
+.cf{
+    background-color:rgb(186, 164, 133);
+    display: flex;
+    gap: 16px;
+    padding: 20px 10px;
+    align-items: stretch;
+}
+h3{
+    font-style:brush script MT ;
+    margin-bottom: 20px;
+}
+
+.Foods{
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 12px;
+    box-sizing: border-box;
+}
+.Foods img{
+    width: 100% !important;
+    aspect-ratio: 350 / 506;
+    height: auto !important;
+    object-fit: cover;
+    display: block;
+}
+.yt h4 a {
+    text-decoration: none;
+    color:beige;
+}
+.yt h4 a:hover{
+    color:black;
+}
+@media (max-width: 800px){
+    .cf{
+        flex-wrap: wrap;
+    }
+    .Foods{
+        flex-basis: 45%;
+    }
+}
+nav{
+    display:inline;
+}
+h4{
+    background-color:rgb(80, 32, 32);
+    display:inline-block;
+    color:beige;
+    padding:10px;
+
+}
+.yt{
+    color:black;
+}
+h4:hover{
+    color:black;
+    background-color:beige;
+    cursor:pointer;
+}
+.contact{
+    
+    color:rgb(80, 32, 32);
+    text-align:center;
+    margin-top:15px;
+    padding:15px;
+}
+
+.tb{ 
+    margin:5px;
+     background-color: beige;
+     padding:20px;
+}

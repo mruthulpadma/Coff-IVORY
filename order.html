@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Coffee | Coff-IVORY</title>
+  <link rel="stylesheet" href="order.css">
+  <link rel="stylesheet" href="shared-header.css">
+  <link rel="stylesheet" href="shared-footer.css">
+</head>
+<body>
+  <header class="cfe-site-header">
+    <div class="cfe-brand"><img class="cfe-brand-logo" src="1LOGO.png" alt="Coff-IVORY logo"><img class="cfe-logo" src="ci-logo.png" alt="Coff-IVORY"></div>
+    <nav aria-label="Main navigation"><ul><li><a href="index.html">HOME</a></li><li><a href="about.html">ABOUT</a></li><li><a href="menucard.html">MENU</a></li><li><a href="order.html">ORDER</a></li><li><a href="review.html">REVIEWS</a></li><li><a href="location.html">LOCATION</a></li><li><a href="cont.html">CONTACT</a></li></ul></nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="order-heading">
+      <div class="hero-copy">
+        <p class="eyebrow">Freshly brewed, just for you</p>
+        <h1 id="order-heading">Your coffee break starts here.</h1>
+        <p>Choose a Coff-IVORY favourite and we will make it with care.</p>
+      </div>
+      <img src="cf-iv.p.jpg" alt="A freshly prepared Coff-IVORY coffee">
+    </section>
+
+    <section class="order-layout" aria-label="Order menu">
+      <div class="menu-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Coff-IVORY menu</p>
+            <h2>Pick your favourite</h2>
+          </div>
+          <p class="item-count">4 signature drinks</p>
+        </div>
+
+        <form class="product-grid">
+          <article class="product-card">
+            <img src="latte.jpg" alt="Latte coffee">
+            <div class="product-info">
+              <div class="product-title"><h3>Velvet Latte</h3><span>₹180</span></div>
+              <p>Espresso, steamed milk and a soft layer of foam.</p>
+              <label for="latte-quantity">Quantity</label>
+              <select id="latte-quantity" name="latte-quantity"><option>0</option><option>1</option><option>2</option><option>3</option></select>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="bubb coff.jpg" alt="Bubble coffee">
+            <div class="product-info">
+              <div class="product-title"><h3>Bubble Coffee</h3><span>₹210</span></div>
+              <p>A creamy coffee treat with fun, chewy bubbles.</p>
+              <label for="bubble-quantity">Quantity</label>
+              <select id="bubble-quantity" name="bubble-quantity"><option>0</option><option>1</option><option>2</option><option>3</option></select>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="chocol.jpg" alt="Chocolate coffee">
+            <div class="product-info">
+              <div class="product-title"><h3>Mocha Bliss</h3><span>₹200</span></div>
+              <p>Rich coffee and chocolate in one indulgent cup.</p>
+              <label for="mocha-quantity">Quantity</label>
+              <select id="mocha-quantity" name="mocha-quantity"><option>0</option><option>1</option><option>2</option><option>3</option></select>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="cold.jpg" alt="Cold coffee">
+            <div class="product-info">
+              <div class="product-title"><h3>Cold Coffee</h3><span>₹170</span></div>
+              <p>Chilled, smooth and made for a refreshing pause.</p>
+              <label for="cold-quantity">Quantity</label>
+              <select id="cold-quantity" name="cold-quantity"><option>0</option><option>1</option><option>2</option><option>3</option></select>
+            </div>
+          </article>
+        </form>
+      </div>
+
+      <aside class="order-summary" aria-labelledby="summary-heading">
+        <p class="eyebrow">Your order</p>
+        <h2 id="summary-heading">Ready when you are</h2>
+        <div class="empty-order">
+          <span aria-hidden="true">☕</span>
+          <p>Select a quantity to add drinks to your order.</p>
+        </div>
+        <div class="summary-total"><span>Total</span><strong>₹0</strong></div>
+        <button type="button">Continue to checkout</button>
+        <p class="pickup-note">Pickup at Coff-IVORY, Nungambakkam, Chennai.</p>
+      </aside>
+    </section>
+  </main>
+  <HR>
+
+  <section class="footer">
+    <div class="name"><a href="index.html"><img class="enim" src="1LOGO.png" alt="Coff-IVORY logo"></a><p class="hea">Coff-IVORY is the flagship brand of Samurai<br>Food Ventures Pvt. Ltd., a Chennai-based food<br>and beverage company.Our vision extends beyond operating restaurants.</p></div>
+    <div class="bot"><h3>Quick Links</h3><a href="menucard.html">Cafe Menu</a><br><a href="cont.html">Contact</a><br><a href="order.html">Order</a><br><a href="location.html">Locate Us</a></div>
+    <div class="mmenu"><h3>Menu</h3><a href="menu.html">Coffee</a><br><a href="cold-m.html">Cold Coffee</a><br><a href="mshake.html">Milk Shake</a><br><a href="snack.html">Snacks</a></div>
+    <div class="details"><section class="location"><h3>Address</h3><p>Coff-IVORY<br>No:42, Nungambakkam,<br>Chennai.</p></section><section class="contact"><h3>Contact</h3><p>+91 98547865XX</p><form><table><tr><td>Enquiry:</td><td><input type="text" placeholder="Enter your email"></td></tr><tr><td></td><td><button class="submit-button" type="submit">Submit</button></td></tr></table></form></section></div>
+  </section>
+  <script src="script.js" defer></script>
+</body>
+</html>

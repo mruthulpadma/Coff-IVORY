@@ -1,0 +1,525 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --accent: rgb(169, 124, 61);
+}
+
+body {
+    background-color: rgb(90, 57, 11);
+    color: rgb(255, 255, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+    padding-top: 124px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.head {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgb(90, 57, 11);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    min-height: 124px;
+    padding: 12px 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 14px;
+}
+
+.head > .brand > img:first-child {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.log {
+    display: flex;
+    align-items: center;
+}
+
+.cfe-logo {
+    width: 260px;
+    height: 110px;
+    object-fit: contain;
+}
+
+.head nav {
+    margin-left: auto;
+    min-width: 0;
+    display: block;
+}
+
+.head nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 66px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.head nav li {
+    display: inline-block;
+    margin: 0;
+}
+
+.head nav a {
+    display: inline-block;
+    padding: 6px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.head nav a:hover {
+    color: #060606;
+}
+
+@media (max-width: 900px) {
+    body {
+        padding-top: 180px;
+    }
+
+    .head {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .head nav {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .head nav ul {
+        width: max-content;
+        margin: 0 auto;
+    }
+}
+
+.b1{
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 5rem);
+    line-height: 1.2;
+    color:white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+.bd1 {
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 5rem);
+    line-height: 1.2;
+    color: rgb(169, 124, 61);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Hero image sits behind all of the call-to-action text. */
+.new {
+    min-height: 560px;
+    padding: clamp(32px, 7vw, 90px);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("bgimg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: heroReveal 900ms ease both;
+}
+
+.head {
+    animation: headerDrop 700ms ease both;
+}
+
+.hero-content > * {
+    animation: contentRise 700ms ease both;
+}
+
+.hero-content > *:nth-child(2) {
+    animation-delay: 120ms;
+}
+
+.hero-content > *:nth-child(3) {
+    animation-delay: 220ms;
+}
+
+.hero-content > *:nth-child(4) {
+    animation-delay: 320ms;
+}
+
+.about,
+.COFFE,
+.footer {
+    animation: contentRise 800ms ease both;
+}
+
+.COFFE:nth-of-type(2) { animation-delay: 100ms; }
+.COFFE:nth-of-type(3) { animation-delay: 180ms; }
+.COFFE:nth-of-type(4) { animation-delay: 260ms; }
+
+@keyframes headerDrop {
+    from { opacity: 0; transform: translateY(-18px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroReveal {
+    from { opacity: 0; transform: scale(1.02); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes contentRise {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.new > h1:not(.b1):not(.bd1) {
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.65);
+}
+
+.order{
+    display: inline-block;
+    margin-top: 14px;
+    padding: 12px 27px;
+    border: 4px solid var(--accent);
+    color: rgb(90, 57, 11);
+    background-color:white;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    transition: background-color 0.6s ease, color 0.2s ease;
+}
+.order:hover { 
+    background:rgb(169, 124, 61);  color:brown;
+    cursor:pointer;
+}
+
+.about {
+    background-color:beige;
+    color:black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
+    margin:25px;
+    padding-top:10px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+}
+
+.im {
+    flex-shrink: 0;
+    margin-left: 30px;
+}
+
+.im img {
+    height: 370px;
+    width: 370px;
+    object-fit:scale-down;
+}
+.Menu{
+    padding:15px;
+}
+
+.COFFE{
+    display:inline-block;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    
+    margin-left: 10px;
+    text-align: center;
+    margin-right: 6px;
+    margin-top: 20px;
+}
+.COFFE:hover
+img:hover{
+    color:red;
+
+}
+nav{
+    display:inline;
+}
+h4{
+    display:inline-block;
+    padding:10px;
+
+}
+.yt{
+    color:black;
+}
+h4:hover{
+    color:brown;
+    cursor:pointer;
+}
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 18px;
+    max-width: none;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.location,
+.contact {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    color: rgb(90, 57, 11);
+}
+
+.contact {
+    text-align: right;
+}
+
+.contact form {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.contact input {
+    padding: 6px;
+    border: 1px solid rgb(90, 57, 11);
+}
+
+@media (max-width: 600px) {
+    .about {
+        flex-direction: column;
+        align-items: stretch;
+        margin: 25px 0;
+    }
+
+    .im {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .vi {
+        width: 100%;
+        height:100%;
+    }
+
+    .vi video {
+        width: 200%;
+        
+        margin: 0 auto;
+    }
+
+    .im img {
+        width: min(370px, 100%);
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .COFFE {
+        display: block;
+        width: min(350px, 100%);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .details {
+        flex-direction: column;
+        margin:0;
+        padding: 94px 90px;
+    }
+
+    .contact {
+        text-align: right;
+    }
+}
+
+.footer {
+    background-color: beige;
+    color: rgb(90, 57, 11);
+
+    margin: 0;
+    padding: 36px 5vw 28px;
+
+    display: grid;
+    grid-template-columns: 2.2fr 1fr 1fr 1.2fr 1.4fr;
+    gap: 28px 32px;
+    align-items: start;
+
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* Coff-IVORY section */
+.name {
+    margin: 0;
+    padding: 0 10px;
+    color:brown;
+}
+
+.enim {
+    display: block;
+    width: min(220px, 100%);
+    
+    
+    margin-bottom: 12px;
+}
+
+.hea p {
+    
+    margin: 0;
+    line-height: 1.8;
+}
+
+/* Quick Links */
+.bot {
+    margin-top: 95px;
+    padding: 0 10px;
+}
+
+.bot h3 {
+    margin: 0 0 8px 0;
+}
+
+.bot a {
+    display: inline-block;
+    color: brown;
+    text-decoration: none;
+    line-height: 2;
+    padding: 2px 0;
+}
+.bot a:hover{
+    color:rgb(41, 70, 159);
+}
+
+/* Menu */
+.mmenu {
+    margin-top: 95px;
+    padding: 0 10px;
+}
+
+.mmenu h3 {
+    margin: 0 0 8px 0;
+}
+
+.mmenu a {
+    display: inline-block;
+    color: brown;
+    text-decoration: none;
+    line-height: 2;
+    padding: 2px 0;
+}
+.mmenu a:hover{
+    color:rgb(41, 70, 159);
+}
+
+
+/* Location + Contact */
+.details {
+    display: contents;
+}
+
+.location {
+    margin-top: 95px;
+    padding-left: 0;
+}
+
+.location h1,
+.contact h1 {
+    margin: 0 0 15px 0;
+}
+
+.location h2 {
+    margin: 0 0 15px 0;
+}
+.location h3{
+    margin-left:10px;
+}
+.location p {
+    padding-left:10px;
+    color:brown;
+    margin: 0 0 8px 0;
+    line-height: 1.8;
+}
+
+
+/* Contact */
+.contact {
+    margin-top:95px;
+    
+}
+
+.contact h3 {
+    margin-right:158px;
+    
+    
+    
+}
+.contact
+.ct p {
+    color:brown;
+    
+}
+.ct p{
+    margin-right:118px;
+}
+
+.contact form {
+    margin: 0;
+    padding-left:20px;
+}
+
+.contact table {
+    margin: 0 auto;
+}
+
+.contact input {
+    padding: 7px;
+}
+.vi{
+        flex: 0 1 320px;
+        width: min(320px, 100%);
+}
+
+.vi video {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+}

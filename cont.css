@@ -1,0 +1,134 @@
+:root {
+  --coffee: #4a2617;
+  --cream: #fff9f1;
+  --accent: #9b5b37;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--coffee);
+  background: var(--cream);
+  font-family: Arial, sans-serif;
+}
+
+.cfe-site-header .cfe-logo {
+  height:110px;
+  width:260px;
+}
+.contact-page {
+  padding-bottom: 3rem;
+}
+
+.contact-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+}
+
+.contact-card {
+  width: min(720px, calc(100% - 2rem));
+  position: relative;
+  z-index: 1;
+  margin: -3rem auto 0;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(74, 38, 23, 0.14);
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.contact-card > p {
+  margin: 0 0 1.75rem;
+  color: #76584a;
+}
+
+.contact-form table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+th,
+td {
+  padding: 0.65rem 0;
+  vertical-align: top;
+  text-align: left;
+}
+
+th {
+  width: 130px;
+  padding-top: 1.35rem;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+  color: var(--coffee);
+  font: inherit;
+  border: 1px solid #cdb9aa;
+  border-radius: 7px;
+  background: #fffdf9;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: 3px solid rgba(155, 91, 55, 0.25);
+  border-color: var(--accent);
+}
+
+.submit-button {
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  border: 0;
+  border-radius: 7px;
+  background: var(--accent);
+}
+
+.submit-button:hover {
+  background: var(--coffee);
+}
+
+@media (max-width: 560px) {
+  .contact-card {
+    margin-top: -1.5rem;
+    padding: 1.25rem;
+  }
+
+  th,
+  td {
+    display: block;
+    width: 100%;
+    padding: 0.35rem 0;
+  }
+
+  th {
+    padding-top: 1rem;
+  }
+}
